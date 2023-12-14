@@ -697,6 +697,10 @@ footer{
         height: 50px;
         margin: 0;
     }
+
+    footer p{
+        margin: 10px 4px;
+    }
     
 }
 
@@ -1511,6 +1515,11 @@ footer{
         padding-top: 30px;
         padding-bottom: 0px;
     }
+
+    iframe{
+        width: 380px;
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -1614,6 +1623,11 @@ form button:active{
     #form-l{
         font-size: 10px;
     }
+
+    .s-u-m h2{
+        margin-bottom: 30px;
+    }
+    
 }
 
 
