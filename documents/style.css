@@ -115,55 +115,34 @@ nav{
     display: none;
 }
 
-/* .slider-nav {
+
+
+.m-slider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.m-images{
     display: flex;
-    flex-direction: column;
+    width: 100%;
+}
+
+.m-slides{
+    flex: 1 0 100%;
+    transition: all 0.5s ease;
+}
+
+.m-slides img{
+    width: 100%;
+    height: 60rem;
+}
+
+.m-info{
     position: absolute;
-    left: 95rem;
-    bottom: 20rem;
-    row-gap: 3rem;
-    z-index: 1;
-}
-
-.slider-nav a {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: rgb(255, 91, 34);
-    opacity: 0.75;
-    transition: 250ms;
-}
-
-.slider-nav a:hover {
-    opacity: 1;
-} */
-
-/* .carousel-indicators{
-    transform: translateX(50%);
-    bottom: 100px;
-    rotate: 100%;
-   
-}
-
-.carousel-indicators button{
-    color: rgb(255, 91, 34);
-}
-*/
-.carousel{
-    margin-top: 10px;
-}
-
-.carousel-item img{
-    max-height: 83vh;
-} 
-
-.carousel-caption{
-    position: absolute;
-    margin: 20px 0;
-    left: 120px;
-    bottom: 150px;
-    text-align: left;
-    width: 35em;
+    bottom: 200px;
+    width: 40rem;
+    margin-left: 200px;
     font-size: 20px;
     color: rgb(107, 36, 12);
     border: rgb(107, 36, 12) solid;
@@ -172,16 +151,61 @@ nav{
     padding: 30px;
 }
 
-.carousel-caption h2{
-    font-size: 3rem;
+.m-dots{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    bottom: 40%;
+    right: 100px;
+    row-gap: 60px;  
 }
 
-.carousel-indicators button{
-    width: 500px;
+.m-dots label{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: solid rgb(107, 36, 12);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 5px;
 }
 
-@media(max-width: 800px){
+.m-dots label:hover{
+    background: rgb(107, 36, 12);
+}
+
+.m-images input{
+    display: none;
+}
+
+#m-img1:checked ~ .m-p1{
+    margin-left: 0;
+}
+
+#m-img2:checked ~ .m-p2{
+    margin-left: -100%;
+}
+
+#m-img3:checked ~ .m-p3{
+    margin-left: -200%;
+}
+
+.lm-btn:hover{
+    color: rgb(107, 36, 12);
+    background: transparent;
+    transition: 0.5s;
+}
+
+
+
+@media(max-width: 480px){
    
+    nav img{
+        margin-top: 10px;
+    }
+
     .check-btn {
         display: block;
         transition: 0.5s;
@@ -206,49 +230,64 @@ nav{
         text-align: left;
         z-index: 5;
         transition: all .5s;
+        
     }
 
     #check:checked ~ .nav-links ul{
         right: 0;
     }
 
-
-    .carousel-caption{
-        position: absolute;
-        margin: 20px 0;
-        left: 120px;
-        bottom: 150px;
-        text-align: left;
-        width: 25em;
-        font-size: 5px;
-        color: rgb(107, 36, 12);
-        border: rgb(107, 36, 12) solid;
-        border-radius: 20px;
-        background-color: #fff;
-        padding: 30px;
+    .header{
+        min-height: 60vh;
     }
+
+    .m-slider{
+       margin-top: 20px;
+    }
+
+    .m-slides img{
+        height: 30rem;
+
+    }
+
+    .m-info{
+   
+        bottom: 80px;
+        width: 20rem;
+        margin-left: 50px;
+        font-size: 13px;
+        padding: 20px;
+    }
+
+
+
+    .m-dots{
+        flex-direction: row;
+        margin: 5px;
+        bottom: 20px;
+        right: 38%;
+        column-gap: 10px; 
+    }
+
+
+    .m-dots label{
+        height: 15px;
+        width: 15px;
+        margin: 5px;
     
-    .carousel-caption h2{
-        font-size: 1rem;
     }
 
     .lm-btn{
         display: inline-block;
         text-decoration: none;
         border: 1px solid rgb(107, 36, 12);
-        font-size: 5px;
+        font-size: 8px;
         background: rgb(107, 36, 12);
         color: white;
         padding: 10px;
         cursor: pointer;
         border-radius: 20px;
     
-    }
-
-    
-
-    .carousel img{
-        height: 100vh;
     }
 
 
@@ -284,12 +323,14 @@ nav{
 }
 
 .o-c-c-col1 p{
-    padding: 0 20px ;
+    padding: 0 20px;
+    font-size: 20px;
  
 }
 
 .o-c-c-col1 ul li{
-    margin: 10px;
+    margin: 20px;
+    font-size: 20px;
 }
 
 
@@ -303,7 +344,7 @@ nav{
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;
-    margin: 10px 50px;
+    margin: 30px 50px 0 50px;
     
 }
 
@@ -333,7 +374,7 @@ nav{
 
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
     .o-c-c{
         flex-direction: column;
       
@@ -344,12 +385,16 @@ nav{
         border-radius: 10px;
         padding: 10px 250px;
         margin-bottom: 5%;
-        padding: 20px 12px;
+        padding: 10px 12px;
         align-items: left;
         box-sizing: border-box;
         width: 23em;
         row-gap: 10px;
         
+    }
+
+    .o-c-c-col1 ul li{
+        margin: 5px;
     }
 
     .o-c-c-col1 button{
@@ -364,6 +409,10 @@ nav{
     .o-c-c-col1 p{
      font-size: 15px;
      
+    }
+
+    .o-c-c-col2{
+        margin: 0;
     }
     
     .o-c-c-col1 ul li{
@@ -471,7 +520,7 @@ nav{
     height: 100%;
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
     .row1{
         flex-direction: column;
     }
@@ -531,7 +580,7 @@ nav{
     width: 200px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
     .row-clients{
         overflow: auto;
     }
@@ -572,6 +621,7 @@ footer{
     flex-basis: 25%;
     text-align: left;
     color: rgb(107, 36, 12);
+    
 }
 
 
@@ -583,9 +633,19 @@ footer{
     text-decoration: none;
     color: rgb(107, 36, 12);
     transition: 0.5s;
-    margin: 10px 0;
+    margin: 60px 0;
+    
+   
 }
 
+.f2 ul li{
+    height: 30px;
+}
+
+.f4 a{
+    height: 50px;
+   
+}
 
 .colfooter ul li a:hover{
     color: rgb(205, 24, 24);
@@ -614,15 +674,28 @@ footer{
 
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
     .rowfooter{
         flex-direction: column;
-        margin: 30px;
+        margin: 20px;
     }
 
     .colfooter{
         text-align: center;
         text-decoration: none;
+    }
+
+    .f2 ul li{
+        height: 25px;
+    }
+
+    .f3 ul li{
+        height: 25px;
+    }
+
+    .f4 a{
+        height: 50px;
+        margin: 0;
     }
     
 }
@@ -654,6 +727,7 @@ footer{
 
 .au-col{
     flex-basis: 50%;
+    margin: 50px;
 }
 
 
@@ -671,7 +745,7 @@ footer{
 
 .au-col2{
     flex-basis: 50%;
-    margin-bottom: 50px;
+    margin: 0 50px 50px 50px;
 }
 
 
@@ -684,6 +758,22 @@ footer{
     .au-row2{
         margin: 20px 0;
         flex-direction: column-reverse;
+    }
+
+    .au-col{
+        margin: 10px;
+    }
+
+    .au-col2{
+        margin: 10px;
+    }
+
+    .au-col img{
+        width: 380px;
+    }
+
+    .au-col2 img{
+        width: 380px;
     }
 }
 
@@ -735,6 +825,7 @@ footer{
 
 .cv-col1{
     flex-basis: 33%;
+    margin: 0 50px;
 }
 
 .cv-row2{
@@ -743,11 +834,17 @@ footer{
 
 .cv-col2{
     flex-basis: 33%;
+    margin: 0 50px;
+}
+
+.col2-info h2{
+    font-weight: bold;
+    font-size: 50px;
 }
 
 @media(max-width: 800px){
     .growth{
-        padding-top: 50px;
+        padding: 30px 0;
     }
 
     .g-row{
@@ -761,6 +858,11 @@ footer{
     .c-value{
         padding: 5px 10px;
         font-size: 10px;
+    }
+
+    .c-value h2{
+        margin: 25px;
+        padding: 0;
     }
 
     .c-value h3{
@@ -786,6 +888,11 @@ footer{
     text-align: center;
     padding: 50px 0;
     color: rgb(107, 36, 12);
+}
+
+.s-info p{
+    font-size: 20px;
+    margin-right: 50px;
 }
 
 .s-info button{
@@ -1009,20 +1116,27 @@ footer{
     margin-left: -200%;
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
+
+    .services h1{
+        margin-top: 20px;
+    }
     .s-info-row1{
         flex-direction: column;
     }
 
     .s-info button{
-        font-size: 10px;
+        font-size: 13px;
         margin-left: 20px;
         margin-bottom: 20px;
     }
 
     .s-info{
         width: 95%;
-      
+    }
+
+    .s-info p{
+        font-size: 17px;
     }
 
     .s-images img{
@@ -1030,14 +1144,15 @@ footer{
     }
 
     .s-dots label{
-        height: 10px;
-        width: 10px;
+        height: 15px;
+        width: 15px;
     }
 
     .s-slider{
         width: 300px;
 
     }
+
 
     .s-info-row2{
         flex-direction: column;
@@ -1078,23 +1193,26 @@ footer{
     font-weight: bold;
 }
 
+.project p{
+    font-size: 20px;
+    margin: 40px 100px;
+}
 
 
 /* Muntinlupa */
 .p-info-row1{
     display: flex;
-    margin: auto 0;
+    margin: 50px 0;
     
     
 }
 
 .p-info-col1{
-    flex-basis: 30%;
+    flex-basis: 50%;
     text-align: center;
-    margin: auto 50px;
-
-    
+    margin: auto 120px;
 }
+
 
 .p-slider h2{
     position: absolute;
@@ -1112,7 +1230,7 @@ footer{
 
 .p-slider{
     position: relative;
-    width: 500px;
+    width: 600px;
     overflow: hidden;
 
 }
@@ -1216,7 +1334,7 @@ footer{
 .p-info-col2{
     flex-basis: 50%;
     text-align: center;
-    margin: auto 50px;
+    margin: auto 120px;
 }
 
 #pimg9:checked ~ .p9{
@@ -1255,7 +1373,16 @@ footer{
     margin-left: -300%;
 }
 
-@media(max-width: 800px){
+@media(max-width: 480px){
+    .project h1{
+        margin-top: 20px;
+    }
+
+    .project p{
+        font-size: 15px;
+        margin: 0;
+    }
+
     .p-info-row1{
         flex-direction: column;
         margin: 10px 0 0 0;
@@ -1274,7 +1401,7 @@ footer{
     }
 
     .p-slider{
-        width: 350px;
+        width: 330px;
     }
 
     .p-slider img{
@@ -1284,7 +1411,7 @@ footer{
 
     .p-dots{
         bottom: 20px;
-        left: 30%;
+        left: 35%;
         
     }
     
@@ -1294,7 +1421,7 @@ footer{
     }
 
     .p-slider h2{
-        left: 27%;
+        left: 33%;
         z-index: 1;
         top: 40px;
         padding: 10px;
@@ -1302,7 +1429,7 @@ footer{
     }
 
     .p-slider h3{
-        left: 33%;
+        left: 38%;
         z-index: 1;
         top: 40px;
         padding: 10px;
@@ -1488,3 +1615,15 @@ form button:active{
         font-size: 10px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
