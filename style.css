@@ -219,6 +219,7 @@ nav{
     .nav-links ul li{
         display: block;
         margin: 20px;
+        
     }
 
     .nav-links ul{
@@ -231,7 +232,7 @@ nav{
         text-align: left;
         z-index: 5;
         transition: all .5s;
-        
+
     }
 
     #check:checked ~ .nav-links ul{
@@ -240,6 +241,7 @@ nav{
 
     .header{
         min-height: 60vh;
+        overflow: hidden;
     }
 
     .m-slider{
@@ -247,16 +249,16 @@ nav{
     }
 
     .m-slides img{
-        height: 10rem;
+        height: 35rem;
 
     }
 
     .m-info{
    
         bottom: 80px;
-        width: 5rem;
+        width: 25rem;
         margin-left: 10px;
-        font-size: 10px;
+        font-size: 13px;
         padding: 20px;
     }
 
@@ -266,7 +268,7 @@ nav{
         flex-direction: row;
         margin: 5px;
         bottom: 20px;
-        right: 50%;
+        right: 38%;
         column-gap: 10px; 
     }
 
@@ -294,7 +296,7 @@ nav{
 
 }
 
-@media(max-width: 900px){
+@media(min-width: 768px){
 
     .nav-links ul li{
      margin-top: 20px;
@@ -428,6 +430,7 @@ nav{
         box-sizing: border-box;
         width: 22em;
         row-gap: 10px;
+        margin-left: 20px;
         
     }
 
@@ -451,6 +454,8 @@ nav{
 
     .o-c-c-col2{
         margin: 0;
+        margin-left: 30px;
+        
     }
     
     .o-c-c-col1 ul li{
@@ -464,7 +469,7 @@ nav{
 
 }
 
-@media(max-width: 900px){
+@media(min-width: 768px){
     .o-c-c{
         flex-direction: column;
         align-items: center;
@@ -670,7 +675,7 @@ nav{
 
 }
 
-@media(max-width: 900px){
+@media(min-width: 768px){
     .row-clients{
         overflow: auto;
     }
@@ -681,6 +686,17 @@ nav{
     }
 }
 
+@media(min-width: 992px){
+    .row-clients{
+      overflow: visible;
+      margin: auto;
+    }
+
+    .col-clients{
+        flex-basis: 20%;
+        
+    }
+}
 
 /* Footer */
 
@@ -797,21 +813,14 @@ footer{
     
 }
 
-@media(max-width: 992px){
-    .f4 a{
-        height: 50px;
-        width: 350px;
-        margin-left: 10px;
-    }
-
+@media(min-width: 768px){
     .rowfooter{
         margin: 20px 50px;
     }
-}
 
-@media(max-width: 900px){
-    .rowfooter{
-        margin: 20px 50px;
+    .rowfooter h2{
+        font-size: 20px;
+        margin-right: 20px;
     }
 
     .f4 a{
@@ -820,6 +829,20 @@ footer{
         margin-left: 10px;
     }
 }
+
+@media(min-width: 992px){
+    .f4 a{
+        height: 50px;
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .rowfooter{
+        margin: 20px 150px;
+    }
+}
+
+
 
 
 
@@ -1783,11 +1806,20 @@ footer{
         padding: 10px;
         width: 350px;
         margin: 0;
+        font-size: 20px;
     }
+
+    .c-us-info h2{
+       margin: 0;
+    }
+
+    .c-us-info h3{
+        margin: 20px 0;
+     }
 
 }
 
-@media(max-width: 900px){
+@media(min-width: 768px){
     .contact-us-row1{
         flex-direction: column;
         padding-top: 0;
@@ -1914,9 +1946,6 @@ form button:active{
         margin-bottom: 30px;
     }
     
-    form{
-        margin-top: 50px;
-    }
 }
 
 @media(max-width: 900px){
