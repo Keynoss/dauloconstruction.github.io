@@ -200,7 +200,7 @@ nav{
 
 
 
-@media(max-width: 480px){
+@media(max-width: 600px){
    
     nav img{
         margin-top: 10px;
@@ -294,7 +294,7 @@ nav{
 }
 
 
-/* Core Value */
+/* Our Core Compentencies */
 
 
 .o-c-c{
@@ -374,7 +374,7 @@ nav{
 
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
     .o-c-c{
         flex-direction: column;
       
@@ -388,7 +388,7 @@ nav{
         padding: 10px 12px;
         align-items: left;
         box-sizing: border-box;
-        width: 23em;
+        width: 22em;
         row-gap: 10px;
         
     }
@@ -520,7 +520,7 @@ nav{
     height: 100%;
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
     .row1{
         flex-direction: column;
     }
@@ -580,7 +580,7 @@ nav{
     width: 200px;
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
     .row-clients{
         overflow: auto;
     }
@@ -591,6 +591,9 @@ nav{
     }
 
 }
+
+
+/* Footer */
 
 footer{
     position: relative;
@@ -674,7 +677,7 @@ footer{
 
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
     .rowfooter{
         flex-direction: column;
         margin: 20px;
@@ -702,6 +705,18 @@ footer{
         margin: 10px 4px;
     }
     
+}
+
+@media(min-width: 992px){
+    .f4 a{
+        height: 50px;
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .rowfooter{
+        margin: 20px 200px;
+    }
 }
 
 
@@ -753,7 +768,7 @@ footer{
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 600px){
     .au-row1{
         flex-direction: column;
         margin-top: 20px;
@@ -846,7 +861,7 @@ footer{
     font-size: 50px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 600px){
     .growth{
         padding: 30px 0;
     }
@@ -1120,7 +1135,7 @@ footer{
     margin-left: -200%;
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
 
     .services h1{
         margin-top: 20px;
@@ -1377,7 +1392,7 @@ footer{
     margin-left: -300%;
 }
 
-@media(max-width: 480px){
+@media(max-width: 600px){
     .project h1{
         margin-top: 20px;
     }
@@ -1442,6 +1457,16 @@ footer{
 
 }
 
+@media(min-width: 992px){
+    .p-info-col1{
+        margin: auto 10px;
+    }
+
+    .p-info-col2{
+        margin: auto 10px;
+    }
+}
+
 /* Contact Us Page */
 
 .contact-us{
@@ -1504,7 +1529,7 @@ footer{
     margin: 20px 30px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 600px){
     .contact-us-row1{
         flex-direction: column;
         padding-top: 0;
@@ -1517,9 +1542,17 @@ footer{
     }
 
     iframe{
-        width: 380px;
+        width: 350px;
         margin-bottom: 10px;
     }
+
+
+    .c-us-info{
+        padding: 10px;
+        width: 350px;
+        margin: 0;
+    }
+
 }
 
 
@@ -1619,7 +1652,7 @@ form button:active{
     color: rgb(107, 36, 12);
 }
 
-@media(max-width: 800px){
+@media(max-width: 600px){
     #form-l{
         font-size: 10px;
     }
@@ -1628,6 +1661,9 @@ form button:active{
         margin-bottom: 30px;
     }
     
+    form{
+        margin-top: 50px;
+    }
 }
 
 
