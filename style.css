@@ -121,6 +121,7 @@ nav{
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .m-images{
@@ -293,6 +294,43 @@ nav{
 
 }
 
+@media(min-width: 768px){
+
+    .nav-links ul{
+     margin-top: 20px;
+     font-size: 20px;
+    }
+
+    .header{
+        min-height: 70vh;
+    }
+
+    .m-slides img{
+        height: 40rem;
+
+    }
+
+    .m-dots{
+        right: 5%;
+        row-gap: 30px;
+    }
+
+    .m-dots label{
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+
+    .m-info{
+   
+        bottom: 80px;
+        width: 30rem;
+        margin-left: 100px;
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
 
 /* Our Core Compentencies */
 
@@ -377,14 +415,14 @@ nav{
 @media(max-width: 600px){
     .o-c-c{
         flex-direction: column;
-      
+        align-items: center;
+        margin: 0 0 0 10px;
     }
 
     .o-c-c-col1{
         background: rgb(245, 204, 160);
         border-radius: 10px;
         padding: 10px 250px;
-        margin-bottom: 5%;
         padding: 10px 12px;
         align-items: left;
         box-sizing: border-box;
@@ -426,7 +464,19 @@ nav{
 
 }
 
+@media(min-width: 768px){
+    .o-c-c{
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .o-c-c-col1{
+        width: 650px;
+        
+    }
+
+
+}
 
 /* SERVICES */
 
@@ -523,6 +573,7 @@ nav{
 @media(max-width: 600px){
     .row1{
         flex-direction: column;
+        align-items: center;
     }
 
     .services-col{
@@ -531,12 +582,19 @@ nav{
 
     .row2{
         flex-direction: column;
+        align-items: center;
     }
 
     .services-col2{
         margin: 15px 0;
     }
 }
+
+
+@media(min-width: 768px){
+    
+}
+
 
 
 
@@ -1420,11 +1478,11 @@ footer{
     }
 
     .p-slider{
-        width: 330px;
+        width: 310px;
     }
 
     .p-slider img{
-        height: 400px;
+        height: 380px;
         margin-bottom: 10px;
     }
 
