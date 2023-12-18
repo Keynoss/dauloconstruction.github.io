@@ -1848,6 +1848,12 @@ footer{
     }
 }
 
+@media(min-width: 992px){
+    .contact-us-row1{
+        flex-direction: row;
+
+    }
+}
 
 /* Send Us Message */
 
